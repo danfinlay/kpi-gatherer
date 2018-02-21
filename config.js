@@ -23,9 +23,9 @@ const stats = [
       return result
     },
   },
-	{
-		name: 'Opera install count',
-		url: 'https://addons.opera.com/en/extensions/details/metamask/',
+  {
+    name: 'Opera install count',
+    url: 'https://addons.opera.com/en/extensions/details/metamask/',
 		selector: '#main > div > div > section > dl > dd:nth-child(2)',
     cleanup: (value) => {
       const result = parseInt(value.replace(',', ''))
