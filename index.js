@@ -21,7 +21,6 @@ function promiseFromConfig(config) {
 	.then((page) => {
 		if ('cleanup' in config) {
 			const result = config.cleanup(page)
-			console.log(`${config.name} cleaned up ${result}`)
 			return result
 		}
 		return page
