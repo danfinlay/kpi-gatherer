@@ -9,7 +9,7 @@ const stats = [
       const selector = 'span.e-f-ih'
       const $ = cheerio.load(page)
       const value = $(selector).text()
-      const result = parseInt(value.replace(',', ''))
+      const result = parseInt(value.replace(/,/g, ''))
       return result
     },
   },
@@ -19,7 +19,7 @@ const stats = [
     selector: '.MetadataCard-content',
     cleanup: (value) => {
       if (!value) return value
-      const result = parseInt(value.replace(',', ''))
+      const result = parseInt(value.replace(/,/g, ''))
       return result
     },
   },
@@ -28,7 +28,7 @@ const stats = [
     url: 'https://addons.opera.com/en/extensions/details/metamask/',
     selector: '#main > div > div > section > dl > dd:nth-child(2)',
     cleanup: (value) => {
-      const result = parseInt(value.replace(',', ''))
+      const result = parseInt(value.replace(/,/g, ''))
       return result
     },
 	},
